@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste do Polígrafo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="cabecalho">
+        <h1>TESTE DO POLÍGRAFO.</h1>
+        <p>Simulação aproximada de um interregatório policial.</p>
+    </div>
+
+    <div class="conteudo">
+
+        <div class="interrogatorio">
+
+            <h2>Central de Interrogatórios</h2>
+            <p class="descricao">Sistema de análise de depoimentos</p>
+
+            <div class="painelPerguntas">
+
+                <p id="numero">AGUARDANDO INÍCIO</p>
+
+                <h3 id="pergunta">
+                  Caso 067#
+                  
+                  <i>Uma vítima foi encontrada morta em circunstâncias ainda não esclarecidas. O indivíduo está sendo interrogado para determinar sua possível relação com a vítima, sua presença no local e seu conhecimento sobre o ocorrido.</i>
+                  <br>*O suspeito está pronto e localizado para o interregatório, quando quiser inicie.*
+                  
+                </h3>
+
+                <button id="botaoIniciar" onclick="iniciar()">
+                    Iniciar interrogatório
+                </button>
+
+                <div id="areaPergunta">
+                    <select id="resposta">
+                        <option value="">Selecione uma resposta</option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                    </select>
+
+                    <button onclick="responder()">Responder</button>
+                </div>
+
+                <p id="resultado"></p>
+
+                <p id="progresso"></p>
+
+            </div>
+
+        </div>
+
+        <div class="monitor">
+
+            <div class="monitorCabecalho">
+                <h3>MONITOR BIOMÉTRICO</h3>
+                <span id="estado">INATIVO</span>
+            </div>
+
+            <div class="painelCoracao">
+
+                <div id="coracao">♥</div>
+
+                <p>FREQUÊNCIA CARDÍACA</p>
+
+                <div class="medida">
+                    <span id="bpm">72</span>
+                    <span class="unidade">BPM</span>
+                </div>
+
+                <div class="grafico">
+                    <svg viewBox="0 0 300 70">
+                        <polyline
+                            points="0,35 35,35 45,30 55,35 65,35 80,5 95,60 110,20 125,35 160,35 175,30 185,35 200,35 215,8 230,58 245,25 260,35 300,35"
+                            id="linhaBatimentos"
+                        />
+                    </svg>
+                </div>
+
+                <p class="legenda">SINAL CARDÍACO ILUSTRATIVO</p>
+
+            </div>
+
+            <div class="painelSaturacao">
+                <div>
+                    <p>SATURAÇÃO DE OXIGÊNIO</p>
+                    <h2><span id="saturacao">98</span><small>%</small></h2>
+                </div>
+
+                <div class="iconeOxigenio">O₂</div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!--IA Utilizada para colocar o monitor cardíaco e otimização na organização do código.-->

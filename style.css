@@ -1,0 +1,285 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #101722;
+    color: white;
+    margin: 0;
+}
+
+.cabecalho {
+    background-color: #1b2635;
+    padding: 15px 30px;
+    border-bottom: 3px solid #a92e35;
+}
+
+.cabecalho h1 {
+    color: #d9434b;
+    margin: 0;
+    font-size: 30px;
+}
+
+.cabecalho p {
+    color: #aeb9c7;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.conteudo {
+    display: flex;
+    gap: 25px;
+    max-width: 1150px;
+    margin: 35px auto;
+    padding: 20px;
+    align-items: stretch;
+}
+
+.interrogatorio {
+    flex: 1;
+    min-width: 0;
+}
+
+.interrogatorio h2 {
+    margin-top: 0;
+}
+
+.descricao {
+    color: #aeb9c7;
+}
+
+.painelPerguntas {
+    background-color: #1b2635;
+    border: 1px solid #354457;
+    border-left: 4px solid #a92e35;
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 25px;
+    min-height: 300px;
+}
+
+#numero {
+    color: #d9434b;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+#pergunta {
+    font-size: 22px;
+    line-height: 1.5;
+    margin: 30px 0;
+}
+
+button, select {
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+button {
+    background-color: #a92e35;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #c43c44;
+}
+
+select {
+    background-color: #101722;
+    color: white;
+    border: 1px solid #46566b;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+#areaPergunta {
+    display: none;
+}
+
+#resultado {
+    line-height: 1.6;
+    color: #c5ced8;
+}
+
+#progresso {
+    color: #8797aa;
+    font-size: 13px;
+}
+
+.monitor {
+    width: 360px;
+    flex-shrink: 0;
+    background-color: #151f2c;
+    border: 1px solid #354457;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.monitorCabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #354457;
+    padding-bottom: 12px;
+}
+
+.monitorCabecalho h3 {
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+#estado {
+    color: #d9434b;
+    font-size: 11px;
+}
+
+.painelCoracao {
+    background-color: #0b131d;
+    border: 1px solid #263849;
+    border-radius: 6px;
+    padding: 20px 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#coracao {
+    color: #ed414a;
+    font-size: 75px;
+    animation: pulsar 1s infinite;
+}
+
+@keyframes pulsar {
+    0% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.15);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.1);
+    }
+
+    60%, 100% {
+        transform: scale(1);
+    }
+}
+
+.painelCoracao > p {
+    color: #8da0b5;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.medida {
+    margin: 10px 0;
+}
+
+#bpm {
+    color: #43e6a0;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.unidade {
+    color: #43e6a0;
+    font-size: 15px;
+}
+
+.grafico {
+    margin-top: 15px;
+    background-color: #07120f;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.grafico svg {
+    width: 100%;
+    display: block;
+}
+
+#linhaBatimentos {
+    fill: none;
+    stroke: #43e6a0;
+    stroke-width: 2;
+    stroke-linejoin: round;
+    stroke-dasharray: 500;
+    animation: moverLinha 3s linear infinite;
+}
+
+@keyframes moverLinha {
+    to {
+        stroke-dashoffset: -500;
+    }
+}
+
+.legenda {
+    font-size: 10px !important;
+}
+
+.painelSaturacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1b2635;
+    border: 1px solid #354457;
+    border-radius: 6px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.painelSaturacao p {
+    color: #aeb9c7;
+    font-size: 10px;
+}
+
+.painelSaturacao h2 {
+    color: #63b3ed;
+    font-size: 32px;
+    margin: 5px 0;
+}
+
+.painelSaturacao small {
+    font-size: 16px;
+}
+
+.iconeOxigenio {
+    color: #63b3ed;
+    font-size: 28px;
+    border: 2px solid #63b3ed;
+    border-radius: 50%;
+    padding: 12px;
+}
+
+.aviso {
+    font-size: 11px;
+    color: #718096;
+    line-height: 1.5;
+    margin-top: 15px;
+}
+
+.rodape {
+    text-align: center;
+    color: #718096;
+    font-size: 11px;
+    padding: 20px;
+}
+
+@media (max-width: 800px) {
+    .conteudo {
+        flex-direction: column;
+        margin: 10px auto;
+    }
+
+    .monitor {
+        width: auto;
+    }
+}
